@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Términos y condiciones · Preciosfarma</title><meta name="description" content=""><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500&display=swap"><style>
+/* Layout: quiet editorial column on sandstone paper; the acta itself is the photograph; one dark band for the offer */
+:root{
+  --sand:#F3EEE7; --paper:#FBF8F3; --ink:#231E1A; --muted:#6B6058; --line:#DCD2C5;
+  --clay:#9A4728; --night:#1E1915; --on-night:#EFE7DC; --copper:#D9A27E;
+  --display:'Cormorant Garamond',Georgia,'Times New Roman',serif;
+  --body:'Jost','Helvetica Neue',Arial,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--sand);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.7;font-weight:400}
+img{max-width:100%;height:auto;display:block}
+[id]{scroll-margin-top:24px}
+a{color:var(--clay)}
+a:focus-visible,.btn:focus-visible{outline:2px solid var(--clay);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.narrow{max-width:780px}
+h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.08;text-wrap:balance;margin:0;letter-spacing:-.005em}
+h1{font-size:clamp(2.7rem,6.4vw,4.8rem)}
+h2{font-size:clamp(2rem,4.2vw,3rem)}
+h3{font-size:1.65rem}
+p{margin:0}
+.eyebrow{font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:var(--clay);font-weight:500}
+.lead{font-size:1.15rem;color:var(--muted);font-weight:300;max-width:62ch}
+.note{font-size:14px;color:var(--muted)}
+.btn{display:inline-block;border:0;cursor:pointer;font-family:var(--body);background:var(--ink);color:var(--sand);padding:15px 26px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;font-weight:500;transition:background .2s}
+.btn:hover{background:var(--clay)}
+.btn.light{background:var(--on-night);color:var(--night)}.btn.light:hover{background:var(--copper)}
+.tlink{color:var(--ink);font-size:12px;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid var(--clay);padding-bottom:3px;font-weight:500}
+.tlink:hover{color:var(--clay)}
+
+/* announcement */
+.announce{background:var(--night);color:var(--on-night);font-size:13px;letter-spacing:.06em}
+.announce .wrap{display:flex;justify-content:center;align-items:center;gap:6px 18px;flex-wrap:wrap;padding-block:11px;text-align:center}
+.announce b{color:var(--copper);font-weight:500}
+.announce a{color:var(--on-night);font-size:12px;letter-spacing:.2em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid var(--copper)}
+/* founders + coming soon */
+.founders{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:24px 40px;align-items:center;background:var(--clay);color:#FBF3EA;padding:30px 32px}
+.founders .eyebrow{color:#F6D9C3}
+.founders .big{font-family:var(--display);font-size:clamp(2rem,4vw,2.8rem);line-height:1.05}
+.seats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.seats div{border:1px solid rgba(251,243,234,.45);padding:12px;display:flex;flex-direction:column;gap:2px}
+.seats b{font-family:var(--display);font-size:2rem;line-height:1;font-weight:500}
+.seats span{font-size:12px;letter-spacing:.08em}
+.soon{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:14px 24px;align-items:center;border:1px solid var(--clay);background:var(--paper);padding:22px 26px}
+.soon .pill{font-size:11px;letter-spacing:.22em;text-transform:uppercase;background:var(--clay);color:#FBF3EA;padding:6px 12px}
+.soon p{font-family:var(--display);font-size:1.6rem;line-height:1.15}
+.fprice{color:var(--copper);font-size:14px;letter-spacing:.04em}
+/* draft modal */
+[hidden]{display:none!important}
+.modal{position:fixed;inset:0;z-index:50;background:rgba(30,25,21,.55);display:flex;align-items:center;justify-content:center;padding:max(16px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.sheet{background:var(--paper);color:var(--ink);width:100%;max-width:620px;max-height:100%;overflow:auto;padding:28px;display:flex;flex-direction:column;gap:12px;position:relative;border:1px solid var(--line)}
+.sheet label{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+.sheet input,.sheet textarea{width:100%;font:inherit;font-size:15px;color:var(--ink);background:#fff;border:1px solid var(--line);padding:10px 12px;border-radius:0}
+.sheet textarea{min-height:200px;resize:vertical;line-height:1.55}
+.sheet input:focus,.sheet textarea:focus{outline:2px solid var(--clay);outline-offset:0}
+.sheet .x{position:absolute;top:10px;right:12px;background:none;border:0;font-size:28px;line-height:1;cursor:pointer;color:var(--muted)}
+.sheet .row{display:flex;flex-wrap:wrap;gap:12px 22px;align-items:center;margin-top:6px}
+.sheet button.tlink{background:none;border-left:0;border-right:0;border-top:0;cursor:pointer;font-family:var(--body)}
+/* header */
+.site{border-bottom:1px solid var(--line);background:var(--sand)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:14px 28px;flex-wrap:wrap;padding-block:20px}
+.mark{font-family:var(--display);font-size:23px;letter-spacing:.3em;text-transform:uppercase;color:var(--ink);text-decoration:none;font-weight:500}
+.menu{display:flex;gap:10px 26px;flex-wrap:wrap;align-items:center}
+.menu a{font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink);text-decoration:none}
+.menu a:hover,.menu a[aria-current]{color:var(--clay)}
+.menu .btn{color:var(--sand);padding:11px 18px}
+
+/* sections */
+.sec{padding-block:clamp(60px,9vw,120px)}
+.sec + .sec{border-top:1px solid var(--line)}
+.stack{display:flex;flex-direction:column;gap:22px}
+.hero{text-align:center;padding-block:clamp(64px,10vw,128px) clamp(40px,6vw,72px)}
+.hero .stack{align-items:center}
+.hero .lead{margin-inline:auto}
+.actions{display:flex;gap:18px 28px;flex-wrap:wrap;align-items:center;justify-content:center}
+figure.doc{margin:0 auto;max-width:1000px}
+figure.doc img{width:100%;border:1px solid var(--line);box-shadow:0 30px 60px -40px rgba(35,30,26,.45)}
+figure.doc figcaption{display:flex;justify-content:space-between;gap:8px 20px;flex-wrap:wrap;margin-top:14px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.figures{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.figures div{padding:34px 26px;display:flex;flex-direction:column;gap:8px}
+.figures div + div{border-left:1px solid var(--line)}
+.figures b{font-family:var(--display);font-weight:500;font-size:clamp(2.6rem,5vw,3.6rem);line-height:1;color:var(--ink)}
+.figures span{color:var(--muted);font-size:15px}
+.cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:36px}
+.cols > div{display:flex;flex-direction:column;gap:10px;min-width:0}
+.cols h3{font-size:1.5rem}
+.split{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(28px,5vw,72px);align-items:start}
+
+/* tables */
+.tw{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums;font-size:15px}
+th{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);font-weight:500;text-align:left;padding:10px 12px;border-bottom:1px solid var(--ink)}
+td{padding:12px;border-bottom:1px solid var(--line);vertical-align:top}
+td.n,th.n{text-align:right;white-space:nowrap}
+.win{color:#2F6B4A;font-weight:500}.lost{color:var(--clay);font-weight:500}
+
+/* plans */
+.plans{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border:1px solid var(--line);background:var(--paper)}
+.plan{padding:34px 28px;display:flex;flex-direction:column;gap:14px;min-width:0}
+.plan + .plan{border-left:1px solid var(--line)}
+.plan .price{font-family:var(--display);font-size:3.2rem;line-height:1;font-weight:500}
+.plan .per{font-size:13px;color:var(--muted);letter-spacing:.04em}
+.plan ul{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px}
+.plan.rec{background:var(--night);color:var(--on-night)}
+.plan.rec .per{color:#B8AC9E}.plan.rec .eyebrow{color:var(--copper)}
+.tag{align-self:flex-start;font-size:11px;letter-spacing:.2em;text-transform:uppercase;border:1px solid var(--copper);color:var(--copper);padding:4px 10px}
+.trial{border-left:2px solid var(--clay);padding:4px 0 4px 16px}
+
+/* cards on the sample page */
+.card{background:var(--paper);border:1px solid var(--line);padding:22px 24px}
+.meta{display:grid;grid-template-columns:max-content minmax(0,1fr);gap:8px 20px;margin:0}
+.meta dt{font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);padding-top:4px}
+.meta dd{margin:0}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:0;border:1px solid var(--line);background:var(--paper)}
+.fact{padding:24px;display:flex;flex-direction:column;gap:6px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);margin:0 -1px -1px 0}
+.fact b{font-family:var(--display);font-weight:500;font-size:2.5rem;line-height:1}
+.cta{background:var(--night);color:var(--on-night);padding:28px}
+.cta > b:first-child{font-family:var(--display);font-weight:500;font-size:1.7rem;display:block;margin-bottom:6px}
+
+/* dark band */
+.band{background:var(--night);color:var(--on-night)}
+.band .eyebrow{color:var(--copper)}
+.band .lead{color:#C9BDAF}
+.band .mail{font-family:var(--display);font-size:clamp(1.5rem,3.4vw,2.2rem);color:var(--on-night);overflow-wrap:anywhere}
+
+/* legal pages */
+.legal h1{font-size:clamp(2.4rem,5vw,3.6rem);margin-bottom:10px}
+.legal h2{font-size:1.75rem;margin:42px 0 12px}
+.legal p,.legal li{max-width:68ch}
+.legal p + p{margin-top:12px}
+.version{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:28px}
+.prose h2{margin:56px 0 18px}
+.prose ul{padding-left:20px}
+
+/* footer */
+.foot{background:#EAE2D7;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+.foot .grid{display:grid;grid-template-columns:2fr 1fr 1fr 1.4fr;gap:32px;padding-block:56px 36px}
+.foot h4{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--ink);margin:0 0 12px;font-weight:500}
+.foot a{color:var(--muted);text-decoration:none}.foot a:hover{color:var(--clay)}
+.foot ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
+.foot .legalline{border-top:1px solid var(--line);padding-block:18px 28px;font-size:12px}
+
+@media (max-width:860px){
+  .cols,.plans,.split,.founders{grid-template-columns:1fr}
+  .soon{grid-template-columns:1fr}
+  .plan + .plan{border-left:0;border-top:1px solid var(--line)}
+  .foot .grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .figures{grid-template-columns:1fr}
+  .figures div + div{border-left:0;border-top:1px solid var(--line)}
+  .foot .grid{grid-template-columns:1fr}
+  .menu{gap:8px 18px}
+  .meta{grid-template-columns:1fr;gap:2px}
+  .meta dd{margin-bottom:10px}
+  table.stack-sm,table.stack-sm tbody,table.stack-sm tr,table.stack-sm td{display:block;width:auto}
+  table.stack-sm tr:first-child{display:none}
+  table.stack-sm tr{border:1px solid var(--line);background:var(--paper);margin:0 0 10px;padding:6px 0}
+  table.stack-sm td{border:0;padding:4px 14px}
+  table.stack-sm td.n{text-align:left;white-space:normal}
+  table.stack-sm td:not(:first-child)::before{content:attr(data-label) ": ";font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style></head><body><header class="site" id="top"><div class="wrap bar"><a class="mark" href="index.html">Preciosfarma</a><nav class="menu" aria-label="Principal"><a href="index.html#planes" aria-current="page">Planes</a><a href="muestra.html#top">Muestra</a><a class="btn" href="index.html#contacto">Primer aviso sin costo</a></nav></div></header><main><section class="sec legal"><div class="wrap narrow"><p class="eyebrow" style="margin-bottom:14px">Legal</p><h1>Términos y condiciones del servicio</h1>
+
+<h2>1. El servicio</h2>
+<p>Preciosfarma ofrece reportes de análisis de precios de compras públicas de medicamentos en México, elaborados a partir de documentos públicos. El servicio se contrata por suscripción mensual o anual, exclusivamente por empresas (personas morales) o personas que actúan en representación de una empresa.</p>
+
+<h2>2. Origen de la información y verificabilidad</h2>
+<p>Los datos de origen son información pública gubernamental. Lo que ofrecemos es la extracción, verificación, organización y análisis de esa información. Cada cifra indica el documento y la página de origen. Preciosfarma no está afiliada ni avalada por ninguna autoridad o institución pública.</p>
+
+<h2>3. Uso de la información y responsabilidad del cliente</h2>
+<p>Los reportes se entregan con fines informativos. Aunque aplicamos controles de calidad, la extracción de documentos escaneados puede contener errores. <b>Antes de tomar cualquier decisión de precio u oferta, el cliente debe verificar las cifras contra el documento oficial enlazado.</b> Las decisiones de oferta son responsabilidad exclusiva del cliente.</p>
+
+<h2>3 bis. Licencia de uso de los reportes</h2>
+<p>Los datos de origen son públicos y cualquier persona puede consultarlos y reutilizarlos citando la fuente; esta licencia no los restringe. Lo que licenciamos es nuestro trabajo: la extracción, verificación, organización, análisis y formato de los reportes. Mientras su suscripción esté activa, su empresa puede usar los reportes para fines internos, incluidos su personal, sus filiales y sus asesores. No puede revenderlos, publicarlos ni redistribuirlos a terceros como producto propio. Puede citar cifras aisladas indicando el documento oficial de origen.</p>
+<h2>3 ter. Independencia y competencia</h2>
+<p>Todos los clientes reciben información del mismo origen público. Nunca compartimos con un cliente información no pública de otro cliente, como las claves que vigila, sus planes, sus preguntas o sus comentarios. Solo publicamos datos de fallos ya publicados por la autoridad, nunca información previa a un fallo. No recomendamos precios de oferta ni participamos en la preparación de propuestas. No prestamos servicios a dependencias compradoras.</p>
+
+<h2>3 quater. Reporte de errores</h2>
+<p>Si el cliente encuentra una diferencia entre un reporte y el documento oficial enlazado, debe avisarnos a contacto@preciosfarma.com indicando la clave y la página. Revisamos y, si el error es nuestro, enviamos el reporte corregido en un máximo de 2 días hábiles.</p>
+<h2>3 quinquies. Resúmenes gratuitos</h2>
+<p>El resumen gratuito que enviamos por correo se publica en una página con una clave propia para cada empresa, incluida en el enlace del correo; sin esa clave el resumen no puede leerse. El resumen está disponible durante 30 días naturales contados desde la fecha de nuestro correo; después se elimina de la página. Si su empresa necesita consultarlo por más tiempo, puede pedirlo expresamente por correo: desde el botón «Pedir más tiempo» del propio resumen o escribiendo a contacto@preciosfarma.com con el asunto «AMPLIAR resumen» y el nombre de la empresa. Concedemos sin costo una ampliación de 30 días naturales por resumen. Los clientes con plan contratado reciben sus reportes en Excel y PDF y los conservan sin límite de tiempo. El resumen contiene solo información pública de empresas y no contiene datos de personas físicas.</p>
+<h2>4. Limitación de responsabilidad</h2>
+<p>Preciosfarma no responde por decisiones tomadas con una cifra que el cliente no verificó contra el documento oficial enlazado, ni por errores que el cliente conocía y no nos reportó conforme a la sección 3 quater. En la medida en que la ley aplicable lo permita, la responsabilidad total de Preciosfarma por cualquier reclamación relacionada con el servicio se limita al monto pagado por el cliente durante el mes anterior al hecho que la origina. Preciosfarma no responde por daños indirectos ni consecuenciales, incluidos utilidades no obtenidas o licitaciones no adjudicadas. Esta limitación no aplica en casos de dolo.</p>
+
+<h2>5. Pagos, renovación y cancelación</h2>
+<p>Precios en pesos mexicanos más IVA. Las suscripciones mensuales se renuevan automáticamente; le avisaremos por correo al menos 5 días antes de cada renovación anual. Puede cancelar en cualquier momento escribiendo a contacto@preciosfarma.com; la cancelación surte efecto al final del periodo pagado. El descuento de cliente fundador se conserva mientras la suscripción siga activa sin interrupciones y no es transferible.</p>
+
+<h2>5 bis. Política de reembolso</h2>
+<p>Si no entregamos el reporte contratado dentro del plazo prometido (2 días hábiles después de publicado el fallo), le reembolsamos el pago completo de ese mes. Puede solicitar un reembolso completo dentro de los primeros 7 días naturales de su primera suscripción si el servicio no le resulta útil. Escriba a contacto@preciosfarma.com; procesamos el reembolso por el mismo medio de pago.</p>
+
+<h2>6. Datos personales</h2>
+<p>No tratamos información de personas físicas identificadas (nombres, correos, teléfonos, firmas, RFC de persona física u otros datos personales), ni la obtenida de documentos públicos, salvo que la persona titular nos autorice expresamente por escrito con su firma autógrafa. Si un documento público incluye datos de una persona física, la omitimos o la reemplazamos por una referencia genérica en nuestros reportes. El tratamiento de datos se rige por nuestro <a href="aviso-de-privacidad.html">aviso de privacidad</a>. Canal único para bajas y derechos ARCO: contacto@preciosfarma.com (asunto: PRIVACIDAD).</p>
+
+<h2>7. Cambios</h2>
+<p>Publicaremos cualquier cambio en esta página con 15 días de anticipación. Última actualización: 29 de octubre de 2026.</p></div></section></main><footer class="foot"><div class="wrap grid">
+<div><a class="mark" href="index.html" style="font-size:18px">Preciosfarma</a><p style="margin-top:12px;max-width:34ch">Precios adjudicados de medicamentos en México, leídos de las actas de fallo y verificados página por página.</p></div>
+<div><h4>Servicio</h4><ul><li><a href="index.html#planes">Planes</a></li><li><a href="muestra.html#top">Muestra</a></li><li><a href="index.html#contacto">Primer aviso sin costo</a></li></ul></div>
+<div><h4>Legal</h4><ul><li><a href="terminos.html">Términos</a></li><li><a href="reembolsos.html">Reembolsos</a></li><li><a href="aviso-de-privacidad.html">Privacidad</a></li></ul></div>
+<div><h4>Contacto</h4><ul><li>contacto@preciosfarma.com</li><li>Respuesta en un máximo de 2 días hábiles</li></ul></div>
+</div><div class="wrap legalline">Preciosfarma · San Juan, Argentina. Pagos procesados por Paddle.com Market Limited como revendedor (merchant of record). Preciosfarma no es una dependencia de gobierno ni está afiliada a ella.</div></footer><div class="modal" id="draftbox" hidden role="dialog" aria-modal="true" aria-labelledby="d-title"><div class="sheet">
+<button class="x" type="button" id="d-close" aria-label="Cerrar">×</button>
+<p class="eyebrow">Borrador listo para enviar</p><h3 id="d-title">Mensaje</h3>
+<label for="d-to">Para</label><input id="d-to" value="contacto@preciosfarma.com" readonly>
+<label for="d-su">Asunto</label><input id="d-su">
+<label for="d-bo">Mensaje (puede editarlo)</label><textarea id="d-bo"></textarea>
+<div class="row"><a class="btn" id="d-gmail" href="#" target="_blank" rel="noopener">Abrir en Gmail</a><a class="tlink" id="d-outlook" href="#" target="_blank" rel="noopener">Abrir en Outlook</a><a class="tlink" id="d-mailto" href="#">Otra app de correo</a><button class="tlink" type="button" id="d-copy">Copiar mensaje</button></div>
+<p class="note">Llene los corchetes y envíelo desde el correo de su área. No necesitamos datos personales.</p>
+</div></div><script>
+(function(){
+  try{history.scrollRestoration='manual'}catch(e){}
+  var smooth=!(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches);
+  function go(){var h=decodeURIComponent(location.hash.slice(1));var el=h&&document.getElementById(h);if(el){el.scrollIntoView()}else{window.scrollTo(0,0)}}
+  window.addEventListener('load',go);
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a[href^="#"]');if(!a)return;
+    var id=a.getAttribute('href').slice(1);var el=document.getElementById(id);if(!el)return;
+    e.preventDefault();el.scrollIntoView({behavior:smooth?'smooth':'auto'});
+    try{history.replaceState(null,'','#'+id)}catch(err){}
+  });
+  var D={
+   aviso:['Primer aviso sin costo','AVISO · claves a vigilar','Hola, Preciosfarma:\n\nQueremos recibir sin costo el aviso del próximo fallo que incluya estas claves:\n[escriba sus claves, por ejemplo 010.000.4158.00]\n\nInstituciones que nos interesan (opcional): [por ejemplo IMSS, ISSSTE]\nEmpresa: [nombre de la empresa]\n\nGracias.'],
+   cotizacion:['Cotización privada','COTIZACION privada','Hola, Preciosfarma:\n\nNos interesa una cotización privada para:\n[claves, licitación o análisis que necesita]\n\nPeriodo: [por ejemplo 2025–2026]\nEmpresa: [nombre de la empresa]\n\nGracias.'],
+   dispositivos:['Precios de dispositivos médicos','INTERES Dispositivos medicos','Hola, Preciosfarma:\n\nNos interesan los precios adjudicados de dispositivos médicos.\nProductos o claves: [escríbalos aquí]\nInstituciones: [por ejemplo IMSS]\nEmpresa: [nombre de la empresa]\n\nGracias.'],
+   laboratorio:['Precios de material de laboratorio','INTERES Material de laboratorio','Hola, Preciosfarma:\n\nNos interesan los precios adjudicados de material de laboratorio.\nProductos o claves: [escríbalos aquí]\nInstituciones: [por ejemplo ISSSTE]\nEmpresa: [nombre de la empresa]\n\nGracias.'],
+   estatales:['Licitaciones estatales','INTERES Licitaciones estatales','Hola, Preciosfarma:\n\nNos interesan las licitaciones de medicamentos de estos estados:\n[escriba los estados]\n\nClaves (opcional): [escríbalas aquí]\nEmpresa: [nombre de la empresa]\n\nGracias.'],
+   otra:['Otra necesidad','OTRA NECESIDAD','Hola, Preciosfarma:\n\nLo que necesitamos (claves, instituciones, periodo o tipo de análisis):\n[descríbalo aquí]\n\nEmpresa: [nombre de la empresa]\n\nGracias.']
+  };
+  var box=document.getElementById('draftbox'),su=document.getElementById('d-su'),bo=document.getElementById('d-bo'),last=null;
+  function enc(s){return encodeURIComponent(s)}
+  function links(){var to='contacto@preciosfarma.com',s=su.value,t=bo.value;
+    document.getElementById('d-gmail').href='https://mail.google.com/mail/?view=cm&fs=1&to='+to+'&su='+enc(s)+'&body='+enc(t);
+    document.getElementById('d-outlook').href='https://outlook.office.com/mail/deeplink/compose?to='+to+'&subject='+enc(s)+'&body='+enc(t);
+    document.getElementById('d-mailto').href='mailto:'+to+'?subject='+enc(s)+'&body='+enc(t);}
+  function openD(k){var d=D[k];if(!d||!box)return false;document.getElementById('d-title').textContent=d[0];su.value=d[1];bo.value=d[2];links();box.hidden=false;document.getElementById('d-copy').textContent='Copiar mensaje';bo.scrollTop=0;var sh=box.querySelector('.sheet');sh.setAttribute('tabindex','-1');sh.focus();return true}
+  function closeD(){box.hidden=true;if(last)last.focus()}
+  if(box){
+    su.addEventListener('input',links);bo.addEventListener('input',links);
+    document.getElementById('d-close').addEventListener('click',closeD);
+    box.addEventListener('click',function(e){if(e.target===box)closeD()});
+    document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!box.hidden)closeD()});
+    document.getElementById('d-copy').addEventListener('click',function(){var c=this,t='Para: contacto@preciosfarma.com\nAsunto: '+su.value+'\n\n'+bo.value;
+      function sel(){bo.focus();bo.select();c.textContent='Seleccionado: cópielo'}
+      try{navigator.clipboard.writeText(t).then(function(){c.textContent='Mensaje copiado'},sel)}catch(err){sel()}});
+    document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('[data-draft]');if(!a)return;last=a;if(openD(a.getAttribute('data-draft')))e.preventDefault()});
+  }
+  var b=document.getElementById('copymail');
+  if(b){b.addEventListener('click',function(){
+    var t='contacto@preciosfarma.com';
+    function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById('mailtext'));var s=getSelection();s.removeAllRanges();s.addRange(r);b.textContent='Seleccionado: cópielo'}
+    try{navigator.clipboard.writeText(t).then(function(){b.textContent='Correo copiado'},sel)}catch(err){sel()}
+  })}
+})();
+</script></body></html>
